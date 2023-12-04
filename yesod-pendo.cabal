@@ -1,0 +1,20 @@
+cabal-version: 2.2
+name:          yesod-pendo
+version:       0.1.0
+build-type:    Simple
+
+library
+  exposed-modules:  Yesod.Pendo
+  hs-source-dirs:   src example
+  build-depends:
+    , base
+    , text
+    , yesod-core            >=1.6 && <1.7
+    , yesod-middleware-csp
+
+  ghc-options:
+    -Wall -Werror -fwarn-tabs -Wincomplete-uni-patterns
+    -Wincomplete-record-updates -Widentities -Wredundant-constraints
+    -Wcpp-undef -Wno-type-defaults -Wunused-packages -O2
+
+  default-language: Haskell2010
