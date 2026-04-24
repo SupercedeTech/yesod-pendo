@@ -24,19 +24,15 @@
             };
           })];
         };
-      in
-      with pkgs;
-      let
-        t = lib.trivial;
-        hl = haskell.lib;
 
-        name = "yesod-pendo";
+        t = pkgs.lib.trivial;
+        hl = pkgs.haskell.lib;
 
         project = devTools:
           let addBuildTools = (t.flip hl.addBuildTools) devTools;
-          in haskellPackages.developPackage {
-            root = lib.sourceFilesBySuffices ./. [ ".cabal" ".hs" ];
-            name = name;
+          in pkgs.haskellPackages.developPackage {
+            root = pkgs.lib.sourceFilesBySuffices ./. [ ".cabal" ".hs" ];
+            name = "yesod-pendo";
             returnShellEnv = !(devTools == [ ]);
 
             modifier = (t.flip t.pipe) [
@@ -54,7 +50,7 @@
 
         defaultPackage = self.packages.${system}.pkg;
 
-        devShell = project (with haskellPackages; [
+        devShell = project (with pkgs.haskellPackages; [
           cabal-fmt
           cabal-install
           hlint
