@@ -20,15 +20,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1688237090,
-        "narHash": "sha256-eA/Wfmg3XDwbbP1xDcTJF0HZna9jtQcQdEWEJV2G/xw=",
+        "lastModified": 1776734388,
+        "narHash": "sha256-vl3dkhlE5gzsItuHoEMVe+DlonsK+0836LIRDnm6MXQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9edfe6dfc69d5995c024dc219187042c5de5c5e8",
+        "rev": "10e7ad5bbcb421fe07e3a4ad53a634b0cd57ffac",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -36,7 +37,8 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "yesod-middleware-csp": "yesod-middleware-csp"
       }
     },
     "systems": {
@@ -51,6 +53,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "yesod-middleware-csp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686786406,
+        "narHash": "sha256-asXBtjdY/A0ykpL6v/Lbq1scw6Ykna0fxNhqpWBwv8A=",
+        "owner": "SupercedeTech",
+        "repo": "yesod-middleware-csp",
+        "rev": "bb2dde22f88f256d1526ed6dbf3522bdd2fb9ec2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SupercedeTech",
+        "repo": "yesod-middleware-csp",
         "type": "github"
       }
     }
