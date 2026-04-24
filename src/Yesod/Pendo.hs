@@ -76,7 +76,8 @@ addPendo = do
               guidesFailed: function() {
                 document.dispatchEvent(new Event("PENDO_GUIDES_FAILED"));
               }
-            }
+            },
+            localStorageOnly: true
           });
         })(#{apiKey});
       |]
